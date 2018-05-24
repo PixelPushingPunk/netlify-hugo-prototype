@@ -6,47 +6,6 @@ publish_mode: editorial_workflow
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 collections:
-  - name: "about"
-    label: "About us"
-    folder: "content/about"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - label: "Title"
-        name: "title"
-        widget: "string"
-
-      - label: "Description"
-        name: "description"
-        required: false
-        widget: "string"
-
-      - label: "Auto Thumbnail Image"
-        name: "autoThumbnailImage"
-        required: false
-        widget: "boolean"
-        default: true
-
-      - label: "Thumbnail Image Position"
-        name: "thumbnailImagePosition"
-        required: false
-        widget: "select"
-        options: ["left", "top", "right"]
-
-      - label: "Thumbnail Image"
-        name: "thumbnailImage"
-        required: false
-        widget: "image"
-
-      - label: "Cover Image"
-        name: "coverImage"
-        required: false
-        widget: "image"
-
-      - label: "Bio"
-        name: "body"
-        widget: "markdown"
-
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
     label: "Post" # Used in the UI
     folder: "content/post" # The path to the folder where the documents are stored
@@ -107,5 +66,88 @@ collections:
         widget: "image"
 
       - label: "Body"
+        name: "body"
+        widget: "markdown"
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "about"
+        label: "About us"
+        folder: "content/about"
+        create: true
+        slug: "{{slug}}"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+
+          - label: "Description"
+            name: "description"
+            required: false
+            widget: "string"
+
+          - label: "Auto Thumbnail Image"
+            name: "autoThumbnailImage"
+            required: false
+            widget: "boolean"
+            default: true
+
+          - label: "Thumbnail Image Position"
+            name: "thumbnailImagePosition"
+            required: false
+            widget: "select"
+            options: ["left", "top", "right"]
+
+          - label: "Thumbnail Image"
+            name: "thumbnailImage"
+            required: false
+            widget: "image"
+
+          - label: "Cover Image"
+            name: "coverImage"
+            required: false
+            widget: "image"
+
+          - label: "Bio"
+            name: "body"
+            widget: "markdown"
+  - name: "about"
+    label: "About us"
+    folder: "content/about"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Description"
+        name: "description"
+        required: false
+        widget: "string"
+
+      - label: "Auto Thumbnail Image"
+        name: "autoThumbnailImage"
+        required: false
+        widget: "boolean"
+        default: true
+
+      - label: "Thumbnail Image Position"
+        name: "thumbnailImagePosition"
+        required: false
+        widget: "select"
+        options: ["left", "top", "right"]
+
+      - label: "Thumbnail Image"
+        name: "thumbnailImage"
+        required: false
+        widget: "image"
+
+      - label: "Cover Image"
+        name: "coverImage"
+        required: false
+        widget: "image"
+
+      - label: "Bio"
         name: "body"
         widget: "markdown"
